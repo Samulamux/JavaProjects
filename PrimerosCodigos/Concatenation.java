@@ -1,5 +1,3 @@
-package scm;
-
 public class Concatenation {
     public static void main(String[] args) {
         int animals = 12;
