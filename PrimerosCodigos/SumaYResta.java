@@ -1,5 +1,3 @@
-package scm;
-
 public class SumaYResta {
     
     public static void main(String[] args) {
