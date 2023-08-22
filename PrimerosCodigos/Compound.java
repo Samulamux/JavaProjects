@@ -1,5 +1,3 @@
-package scm;
-
 public class Compound {
     public static void main(String[] args) {
         int numCookies = 17;
