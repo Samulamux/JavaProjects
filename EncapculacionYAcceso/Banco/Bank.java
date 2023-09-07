@@ -1,21 +1,23 @@
-public class Bank{
+public class Bank {
+    
+    private CheckingAccount accountOne;
+    private CheckingAccount accountTwo;
+    private CheckingAccount accountThree;
+    
+    public Bank(){
+        accountOne = new CheckingAccount("\nZeus",100);
+        accountTwo = new CheckingAccount("\nHades",200);
+        accountThree = new CheckingAccount("\nCronos",800);
+    }
 
-private CheckingAccount accountOne;
-private CheckingAccount accountTwo;
-
-public Bank(){
-
-accountOne = new CheckingAccount("Zeus",100);
-accountTwo = new CheckingAccount("Hades",200);
-}
-
-public static void main(String[] args) {
-
-Bank bankOfGods = new Bank();
-
-System.out.println(bankOfGods.accountOne.name);
-
-System.out.println(bankOfGods.accountOne.balance);
-
-}
+    public static void main(String[] args) {
+        Bank bankOfGods = new Bank();
+        System.out.println(bankOfGods.accountOne.name);
+        System.out.println(bankOfGods.accountOne.balance);
+        System.out.println(bankOfGods.accountTwo.name);
+        System.out.println(bankOfGods.accountTwo.balance);
+        System.out.println(bankOfGods.accountThree.name);
+        System.out.println(bankOfGods.accountThree.balance);
+    }
+    
 }
