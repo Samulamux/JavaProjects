@@ -11,14 +11,26 @@ public class Person {
     public Person() {
     }
 
+    public Person(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
     public Person(String nombre) {
         this.nombre = nombre;
     }
 
-    public Person(char genero, int edad, String direccion) {
+    public Person(String nombre, char genero, int edad, String direccion) {
+        this.nombre = nombre;
         this.genero = genero;
         this.edad = edad;
         this.direccion = direccion;
+    }
+    
+    //---------------------------------------
+    
+    public String obtenerDetalle() {
+        return "Nombre: %s Edad: %d ".formatted(this.nombre, this.edad);
     }
     
     //--------------GETTERS------------------
@@ -62,7 +74,7 @@ public class Person {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Person{");
+        sb.append("Persona{");
         sb.append("nombre=").append(nombre);
         sb.append(", genero=").append(genero);
         sb.append(", edad=").append(edad);
