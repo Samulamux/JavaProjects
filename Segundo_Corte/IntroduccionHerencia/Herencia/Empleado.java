@@ -5,8 +5,8 @@ public class Empleado extends Person{
     private double sueldo;
     private static int contadorEmpleado;
 
-    public Empleado(String nombre,double sueldo) {
-        super(nombre);
+    public Empleado(double sueldo, String nombre, int edad) {
+        super(nombre, edad);
         this.idEmpleado = ++Empleado.contadorEmpleado;
         this.sueldo = sueldo;
     }
@@ -20,26 +20,19 @@ public class Empleado extends Person{
     public double getSueldo() {
         return sueldo;
     }
-
-    public static int getContadorEmpleado() {
-        return contadorEmpleado;
-    }
     
     //-----------SETTERS--------------
 
-    public void setIdEmpleado(int idEmpleado) {
-        this.idEmpleado = idEmpleado;
-    }
-
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
-    }
-
-    public static void setContadorEmpleado(int contadorEmpleado) {
-        Empleado.contadorEmpleado = contadorEmpleado;
-    }       
+    } 
 
     //---------------toString---------------------
+
+    @Override
+    public String obtenerDetalle() {
+        return super.obtenerDetalle() + "Sueldo: " + this.sueldo;
+    }
     
     @Override
     public String toString() {
